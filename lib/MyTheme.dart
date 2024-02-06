@@ -6,7 +6,12 @@ class Mytheme {
   static ThemeData lightmode = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
-        backgroundColor: Colors.transparent, elevation: 0, centerTitle: true),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: blackcolor,
+        )),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: primarylightcolor,
       selectedItemColor: blackcolor,
@@ -19,8 +24,12 @@ class Mytheme {
       ),
       titleMedium: TextStyle(
         fontSize: 25,
-        fontWeight: FontWeight.bold,
         color: blackcolor,
+        fontWeight: FontWeight.w500,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
       ),
     ),
   );
