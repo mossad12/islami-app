@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Mytheme {
   static Color blackcolor = Color(0xff242424);
   static Color primarylightcolor = Color(0xffB7935F);
+  static Color whitecolor = Color(0xffFFFFFF);
   static ThemeData lightmode = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
