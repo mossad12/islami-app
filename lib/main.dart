@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         SuraDetailsScreen.routName: (context) => SuraDetailsScreen(),
       },
       theme: Mytheme.lightmode,
+      locale: Locale('en'),
     );
   }
 }
