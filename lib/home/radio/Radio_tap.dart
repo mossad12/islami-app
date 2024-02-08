@@ -8,7 +8,14 @@ class RadioTap extends StatelessWidget {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Center(child: Image.asset('assets/images/radio_image.png')),
       SizedBox(
-        height: 15,
+        height: MediaQuery.of(context).size.height * 0.07,
+      ),
+      Text(
+        'اذاعة القران الكريم',
+        style: Theme.of(context).textTheme.titleLarge,
+      ),
+      SizedBox(
+        height: MediaQuery.of(context).size.height * 0.07,
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
