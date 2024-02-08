@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../MyTheme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadethTap extends StatelessWidget {
   @override
@@ -8,15 +7,15 @@ class HadethTap extends StatelessWidget {
     return Column(children: [
       Center(child: Image.asset('assets/images/hadeth_logo.png')),
       Divider(
-        color: Mytheme.primarylightcolor,
+        color: Theme.of(context).primaryColor,
         thickness: 3,
       ),
       Text(
-        'Hadeth Name',
+        AppLocalizations.of(context)!.hadeth_name,
         style: Theme.of(context).textTheme.titleMedium,
       ),
       Divider(
-        color: Mytheme.primarylightcolor,
+        color: Theme.of(context).primaryColor,
         thickness: 3,
       ),
     ]);
