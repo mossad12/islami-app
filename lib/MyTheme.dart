@@ -85,17 +85,17 @@ class Mytheme {
       titleLarge: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.bold,
-        color: primarydarkcolor,
+        color: whitecolor,
       ),
       titleMedium: TextStyle(
         fontSize: 25,
-        color: primarydarkcolor,
+        color: whitecolor,
         fontWeight: FontWeight.w600,
       ),
       bodyMedium: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w400,
-        color: primarydarkcolor,
+        color: whitecolor,
       ),
     ),
   );
