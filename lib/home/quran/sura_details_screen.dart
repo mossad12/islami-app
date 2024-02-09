@@ -69,7 +69,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
             itemCount: verses.length,
             separatorBuilder: (context, index) {
               return Divider(
-                color: Theme.of(context).primaryColor,
+                      color: provider.isDark()
+                          ? Mytheme.primarydarkcolor
+                          : Theme.of(context).primaryColor,
                       thickness: 2,
                     );
             },

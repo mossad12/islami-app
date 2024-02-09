@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/MyTheme.dart';
+import 'package:islami/home/settings/app_notify_provider.dart';
+import 'package:provider/provider.dart';
 
 class SebhaTap extends StatefulWidget {
   @override
@@ -13,6 +15,7 @@ class _SebhaTapState extends State<SebhaTap> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppProvider>(context);
     return Column(children: [
       Stack(
         children: [
@@ -38,7 +41,9 @@ class _SebhaTapState extends State<SebhaTap> {
             child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(
-                    Mytheme.primarylightcolor,
+                    provider.isDark()
+                        ? Mytheme.primarydarkcolor
+                        : Mytheme.primarylightcolor,
                   ),
                   shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20))),
@@ -58,13 +63,15 @@ class _SebhaTapState extends State<SebhaTap> {
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: Mytheme.primarylightcolor,
+              color: provider.isDark()
+                  ? Mytheme.primarydarkcolor
+                  : Mytheme.primarylightcolor,
             ),
             child: Text(
               '$all_tasbeh',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Colors.white,
-                  ),
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -74,7 +81,9 @@ class _SebhaTapState extends State<SebhaTap> {
         child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(
-                Mytheme.primarylightcolor,
+                provider.isDark()
+                    ? Mytheme.primarydarkcolor
+                    : Mytheme.primarylightcolor,
               ),
               shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20))),
@@ -96,13 +105,15 @@ class _SebhaTapState extends State<SebhaTap> {
         padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Mytheme.primarylightcolor,
+          color: provider.isDark()
+              ? Mytheme.primarydarkcolor
+              : Mytheme.primarylightcolor,
         ),
         child: Text(
           '$tasbeh',
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: Colors.white,
-              ),
+            color: Colors.white,
+          ),
         ),
       ),
     ]);

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:islami/home/settings/app_notify_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../MyTheme.dart';
 
 class RadioTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppProvider>(context);
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Center(child: Image.asset('assets/images/radio_image.png')),
       SizedBox(
@@ -22,17 +25,23 @@ class RadioTap extends StatelessWidget {
         children: [
           Icon(
             Icons.skip_previous,
-            color: Mytheme.primarylightcolor,
+            color: provider.isDark()
+                ? Mytheme.primarydarkcolor
+                : Mytheme.primarylightcolor,
             size: 55,
           ),
           Icon(
             Icons.play_arrow,
-            color: Mytheme.primarylightcolor,
+            color: provider.isDark()
+                ? Mytheme.primarydarkcolor
+                : Mytheme.primarylightcolor,
             size: 55,
           ),
           Icon(
             Icons.skip_next,
-            color: Mytheme.primarylightcolor,
+            color: provider.isDark()
+                ? Mytheme.primarydarkcolor
+                : Mytheme.primarylightcolor,
             size: 55,
           ),
         ],
