@@ -12,6 +12,7 @@ class _SebhaTapState extends State<SebhaTap> {
   int counter = 0;
   String tasbeh = 'سبحان الله';
   int all_tasbeh = 0;
+  double rotate = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,10 @@ class _SebhaTapState extends State<SebhaTap> {
           Container(
               margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.08),
               child: Center(
-                  child: Image.asset('assets/images/body_sebha_logo.png'))),
+                  child: Transform.rotate(
+                      angle: rotate,
+                      child:
+                          Image.asset('assets/images/body_sebha_logo.png')))),
         ],
       ),
       Container(
@@ -89,6 +93,7 @@ class _SebhaTapState extends State<SebhaTap> {
                   borderRadius: BorderRadius.circular(20))),
             ),
             onPressed: () {
+              rotate++;
               all_tasbeh++;
               tsbehChang();
               setState(() {});
